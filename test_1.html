@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link 
+href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap"
+ rel="stylesheet">
+ <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js">
+ </script>
+
+  <a href="https://www.facebook.com/share/16LefGc8R4/" class="btn1" target="_blank">Designer</a>
+
+  
+  
+  
+</head>
+
+<body>
+    <spline-viewer
+     class="background" 
+    url="https://prod.spline.design/x6SdWSqIYuPO4ETy/scene.splinecode"></spline-viewer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchBox = document.querySelector('.search-box');
+            const searchBtn = document.querySelector('.search-btn');
+      
+            searchBtn.addEventListener('click', () => {
+                const query = searchBox.value.trim();
+                if (query) {
+                    const googleSearchURL = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+                    window.open(googleSearchURL, '_blank'); // فتح نتائج البحث
+                } else {
+                    alert('Please enter something to search!');
+                }
+            });
+      
+            searchBox.addEventListener('keypress', (event) => {
+                if (event.key === 'Enter') {
+                    searchBtn.click(); // تشغيل زر البحث عند الضغط على Enter
+                }
+            });
+        });
+      </script>
+      
+
+    <script src="script.js"></script>
+
+    <nav class="navdar">
+        <h1 class="logo">logo</h1>
+            <ul class="menu">
+                <li>Home</li>
+                <li>App</li>
+                <li>Work</li>
+            </ul>
+            <button class="btn1">connect</button>
+    </nav>
+    <main class="mainarea">
+        <h1 class="text1">first site</h1>
+    </main>
+   
+   
+</body>
+<div class="search-area">
+</div>
+    <input type="text" class="search-box" placeholder="Search...">
+    <button class="search-btn">Search</button>
+</div>
+
+</html>
